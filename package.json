@@ -1,155 +1,155 @@
 {
-  "name": "remark-generic-extensions",
-  "version": "1.3.0",
-  "description": "!Extension\\[Content\\]\\(Argument\\)\\{Properties\\} -> :tada: — [commonmark generic directive extension](https://github.com/jgm/CommonMark/wiki/Generic-Directive-Extension-List) for remark",
-  "keywords": [
-    "remark",
-    "remark-plugin",
-    "markdown",
-    "commonmark",
-    "html",
-    "react"
-  ],
-  "main": "lib/index.js",
-  "files": [
-    "lib"
-  ],
-  "browser": {
-    "joi": "joi-browser",
-    "lib/index.js": "lib/browser.min.js"
-  },
-  "scripts": {
-    "#<git hooks>": "handled by husky",
-    "precommit": "lint-staged",
-    "#</git hooks>": "handled by husky",
-    "build": "yarn build-server && yarn build-browser",
-    "build-server": "babel --ignore /__tests__/ -d ./lib ./src",
-    "watch": "babel -w  --ignore /__tests__/ -d ./lib ./src",
-    "build-browser": "yarn build-browserify && yarn build-mangle",
-    "build-browserify": "browserify ./src/index.js --bare -t babelify -s remarkGenericExtensions > ./lib/browser.js",
-    "build-mangle": "esmangle ./lib/browser.js > ./lib/browser.min.js",
-    "prepublish": "yarn build",
-    "lint": "eslint --fix ./src",
-    "pretest": "yarn lint",
-    "test": "cross-env NODE_ENV=test jest --runInBand",
-    "coverage": "nyc report --temp-directory=coverage --reporter=text-lcov | coveralls"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/medfreeman/remark-generic-extensions.git"
-  },
-  "author": "Mehdi Lahlou <mehdi.lahlou@free.fr>",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/medfreeman/remark-generic-extensions/issues"
-  },
-  "homepage": "https://github.com/medfreeman/remark-generic-extensions#readme",
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-eslint": "^8.0.0",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-plugin-transform-function-bind": "^6.22.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
-    "babelify": "^8.0.0",
-    "browserify": "^16.0.0",
-    "coveralls": "^3.0.0",
-    "cross-env": "^5.0.5",
-    "eslint": "^4.6.1",
-    "eslint-config-i-am-meticulous": "^8.0.0",
-    "eslint-config-prettier": "^2.5.0",
-    "eslint-plugin-babel": "^4.1.2",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jest": "^21.1.0",
-    "eslint-plugin-prettier": "^2.3.1",
-    "esmangle": "^1.0.1",
-    "git-exec-and-restage": "^1.0.1",
-    "husky": "^0.14.3",
-    "jest": "^22.0.4",
-    "lint-staged": "^6.0.0",
-    "nyc": "^11.2.1",
-    "prettier": "^1.7.0",
-    "react": "^16.2.0",
-    "react-test-renderer": "^16.2.0",
-    "remark": "^9.0.0",
-    "remark-html": "^7.0.0",
-    "remark-react": "^4.0.1",
-    "sinon": "^4.0.0",
-    "vfile-reporter": "^4.0.0"
-  },
-  "dependencies": {
-    "core-js": "^2.5.1",
-    "deepmerge": "^2.0.0",
-    "joi": "^13.0.1",
-    "joi-browser": "^13.0.1"
-  },
-  "lint-staged": {
-    "*.js": [
-      "git-exec-and-restage prettier --write --"
-    ]
-  },
-  "babel": {
-    "presets": [
-      "babel-preset-env",
-      "babel-preset-stage-2"
+    "name": "remark-generic-extensions",
+    "version": "1.3.0",
+    "description": "!Extension\\[Content\\]\\(Argument\\)\\{Properties\\} -> :tada: — [commonmark generic directive extension](https://github.com/jgm/CommonMark/wiki/Generic-Directive-Extension-List) for remark",
+    "keywords": [
+        "remark",
+        "remark-plugin",
+        "markdown",
+        "commonmark",
+        "html",
+        "react"
     ],
-    "plugins": [
-      "add-module-exports",
-      "transform-function-bind",
-      "transform-object-rest-spread"
+    "main": "lib/index.js",
+    "files": [
+        "lib"
     ],
-    "env": {
-      "test": {
+    "browser": {
+        "joi": "joi-browser",
+        "lib/index.js": "lib/browser.min.js"
+    },
+    "scripts": {
+        "#<git hooks>": "handled by husky",
+        "precommit": "lint-staged",
+        "#</git hooks>": "handled by husky",
+        "build": "yarn build-server && yarn build-browser",
+        "build-server": "babel --ignore /__tests__/ -d ./lib ./src",
+        "watch": "babel -w  --ignore /__tests__/ -d ./lib ./src",
+        "build-browser": "yarn build-browserify && yarn build-mangle",
+        "build-browserify": "browserify ./src/index.js --bare -t babelify -s remarkGenericExtensions > ./lib/browser.js",
+        "build-mangle": "esmangle ./lib/browser.js > ./lib/browser.min.js",
+        "prepublish": "yarn build",
+        "lint": "eslint --fix ./src",
+        "pretest": "yarn lint",
+        "test": "cross-env NODE_ENV=test jest --runInBand",
+        "coverage": "nyc report --temp-directory=coverage --reporter=text-lcov | coveralls"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/besrabasant/remark-generic-extensions.git"
+    },
+    "author": "Basant Besra <besrabasant@gmail.com>",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/besrabasant/remark-generic-extensions/issues"
+    },
+    "homepage": "https://github.com/besrabasant/remark-generic-extensions#readme",
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-eslint": "^8.0.0",
+        "babel-plugin-add-module-exports": "^0.2.1",
+        "babel-plugin-transform-function-bind": "^6.22.0",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-preset-env": "^1.6.0",
+        "babel-preset-react": "^6.24.1",
+        "babel-preset-stage-2": "^6.24.1",
+        "babelify": "^8.0.0",
+        "browserify": "^16.0.0",
+        "coveralls": "^3.0.0",
+        "cross-env": "^5.0.5",
+        "eslint": "^4.6.1",
+        "eslint-config-i-am-meticulous": "^8.0.0",
+        "eslint-config-prettier": "^2.5.0",
+        "eslint-plugin-babel": "^4.1.2",
+        "eslint-plugin-import": "^2.7.0",
+        "eslint-plugin-jest": "^21.1.0",
+        "eslint-plugin-prettier": "^2.3.1",
+        "esmangle": "^1.0.1",
+        "git-exec-and-restage": "^1.0.1",
+        "husky": "^0.14.3",
+        "jest": "^22.0.4",
+        "lint-staged": "^6.0.0",
+        "nyc": "^11.2.1",
+        "prettier": "^1.7.0",
+        "react": "^16.2.0",
+        "react-test-renderer": "^16.2.0",
+        "remark": "^9.0.0",
+        "remark-html": "^7.0.0",
+        "remark-react": "^4.0.1",
+        "sinon": "^4.0.0",
+        "vfile-reporter": "^4.0.0"
+    },
+    "dependencies": {
+        "core-js": "^2.5.1",
+        "deepmerge": "^2.0.0",
+        "joi": "^13.0.1",
+        "joi-browser": "^13.0.1"
+    },
+    "lint-staged": {
+        "*.js": [
+            "git-exec-and-restage prettier --write --"
+        ]
+    },
+    "babel": {
         "presets": [
-          "babel-preset-env",
-          "babel-preset-stage-2",
-          "babel-preset-react"
+            "babel-preset-env",
+            "babel-preset-stage-2"
         ],
-        "sourceMaps": "both"
-      }
+        "plugins": [
+            "add-module-exports",
+            "transform-function-bind",
+            "transform-object-rest-spread"
+        ],
+        "env": {
+            "test": {
+                "presets": [
+                    "babel-preset-env",
+                    "babel-preset-stage-2",
+                    "babel-preset-react"
+                ],
+                "sourceMaps": "both"
+            }
+        },
+        "ignore": [
+            "node_modules/*"
+        ]
     },
-    "ignore": [
-      "node_modules/*"
-    ]
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "testMatch": [
-      "**/?(*.)test.js"
-    ],
-    "coverageDirectory": "./coverage/",
-    "mapCoverage": true,
-    "collectCoverage": true
-  },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "parserOptions": {
-      "ecmaVersion": 8,
-      "sourceType": "module"
+    "jest": {
+        "testEnvironment": "node",
+        "testMatch": [
+            "**/?(*.)test.js"
+        ],
+        "coverageDirectory": "./coverage/",
+        "mapCoverage": true,
+        "collectCoverage": true
     },
-    "plugins": [
-      "babel",
-      "jest"
-    ],
-    "extends": [
-      "eslint-config-i-am-meticulous",
-      "plugin:jest/recommended",
-      "eslint-config-prettier"
-    ],
-    "env": {
-      "node": true,
-      "es6": true,
-      "jest": true
+    "eslintConfig": {
+        "parser": "babel-eslint",
+        "parserOptions": {
+            "ecmaVersion": 8,
+            "sourceType": "module"
+        },
+        "plugins": [
+            "babel",
+            "jest"
+        ],
+        "extends": [
+            "eslint-config-i-am-meticulous",
+            "plugin:jest/recommended",
+            "eslint-config-prettier"
+        ],
+        "env": {
+            "node": true,
+            "es6": true,
+            "jest": true
+        },
+        "globals": {
+            "jest/globals": true,
+            "jasmine": true
+        }
     },
-    "globals": {
-      "jest/globals": true,
-      "jasmine": true
+    "prettier": {
+        "printWidth": 80,
+        "parser": "babylon"
     }
-  },
-  "prettier": {
-    "printWidth": 80,
-    "parser": "babylon"
-  }
 }
